@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"> </script>
+        <script src="./block.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+
+            <div class="header">
+                <h3>MATRAKSHAN</h3>
+            </div>
+        
+
+        <div style="justify-content: center; text-align: center; display: flex; padding: 41px;" >
+
+            <button type="button" onclick="connect()" > connect account</button>
+        </div>
+        
+        
+        
+        <section id="Candidate-section">
+        <div id="cand">
+            <div class="candidate">
+                <img src="download.png" alt="spidy">
+            </div>
+            <div class="candidate">
+                <img src="download1.jpg" alt="thunder">
+            </div>
+            <div class="candidate">
+
+                <img src="download 2.png" alt="fav" >
+            </div>
+        </div>
+        </section>
+        
+        <section id="Button-section">
+
+            <div id="Btn">
+            <button class="candidate1" type="button" onclick="candidate1()">Candidate 1</button>
+            <button class="candidate1" type="button" onclick="candidate2()">Candidate 2</button>
+            <button class="candidate1" type="button" onclick="candidate3()">Candidate 3</button>
+            
+            
+            </div>
+        </section>
+        <div id="count" style="justify-content: center;
+        text-align: center;
+        display: flex;">
+            <h1 class="counter-display">(..)</h1>
+
+        </div>
+    </body>
+
+    <script>
+        let counterDisplayEle = document.querySelector('.counter-display');
+        let counterCandidate1Ele = document.querySelector('.candidate1');
+        let counterCandidate2Ele = document.querySelector('.candidate2');
+        let counterCandidate3Ele = document.querySelector('.candidate3');
+
+        let count = 0;
+
+        var x = true;
+
+        updateDisplay();
+    
+        if(x==true){
+        counterCandidate1Ele.addEventListener("click", () => {
+            count = 1;
+            x = false;
+
+            updateDisplay();
+        })
+        }
+
+        if(x==true){
+        counterCandidate2Ele.addEventListener("click", () => {
+            count = 1;
+            x = false;
+            updateDisplay();
+        })
+    }
+        if(x==true){
+        counterCandidate3Ele.addEventListener("click", () => {
+            count = 1;
+            x = false;
+            
+            updateDisplay();
+        } );
+         
+       
+    }
+
+        function updateDisplay() {
+            counterDisplayEle.innerHTML = count, x;
+        };
+    </script>
+
+    
+</html>
